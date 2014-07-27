@@ -1,7 +1,8 @@
 buildscript {
     repositories {
-        maven { url "http://repo.spring.io/libs-snapshot" }
-        mavenLocal()
+//        maven { url "http://repo.spring.io/libs-snapshot" }
+//        mavenLocal()
+        maven { url "http://localhost:8081/artifactory/remote-repos" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
@@ -19,8 +20,9 @@ jar {
 }
 
 repositories {
-    mavenCentral()
-    maven { url "http://repo.spring.io/libs-snapshot" }
+//    mavenCentral()
+//    maven { url "http://repo.spring.io/libs-snapshot" }
+    maven { url "http://localhost:8081/artifactory/remote-repos" }
 }
 
 dependencies {
